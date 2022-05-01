@@ -1,0 +1,378 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+/* Font ^^ */
+* 
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body
+{
+  background-color: #262626; 
+}
+.navigation {
+  height: 70px;
+  background: #262626;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #262626;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #2581DC;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 1px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/* .first-content 
+{
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.first-content a
+{
+  text-decoration: none;
+  color: #ffffff;
+}*/
+
+[carrousel]
+{
+  display: flex;
+  position: relative;
+  background-color:rgba(238, 119, 17, 0.6); 
+  border-radius: 0px;
+  min-height: 50vh;
+}
+
+[carrousel]::before 
+{
+  content: "";
+  display: block;
+  
+}
+
+[carrousel] [name~=carrousel]
+{
+  display: none;
+}
+
+[carrousel]  [name~=carrousel]:checked + .slide
+{
+  pointer-events: auto;
+  opacity: 1;
+}
+[carrousel]  [name~=carrousel]:checked + .slide .slide-content
+{
+  opacity: 1;
+}
+[carrousel] .slide
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[carrousel] #bruh
+{
+  position: absolute;
+  background-image: url(/PKS_WALLPAPER.jpeg);
+  background-position: 100%;
+  background-size: 925px;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  width : 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+[carrousel] .slide-content
+{
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+[carrousel] .slide-content img .one 
+{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  transition: none;
+}
+
+[carrousel] .back,
+[carrousel] .forward
+{
+  display: block;
+  position: absolute;
+  top: calc(50% - 2rem);
+  height: 4rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 0.5rem;
+  background-color: #d5f4df;
+  border-radius: 100px;
+  color: #1F1C2C;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0,0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+  z-index: 1;
+}
+
+[carrousel] .back:hover,
+[carrousel] .forward:hover
+{
+  transform: scale(1);
+  background-color: #928DAB;
+}
+
+[carrousel] .back
+{
+  left: calc(0% + 1rem);
+}
+
+[carrousel] .forward
+{
+  right: calc(0% + 1rem);
+}
+
+[carrousel]
+{
+  padding: 1rem;
+}
+
+[carrousel] h1
+{
+  position: absolute;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
+  color: #030303;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  left: 16px;
+  top: -1px;
+  margin-bottom: -20px;
+  height: 20px;
+}
+
+[carrousel] p
+{
+  font-size: 1.5 rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+[carrousel] .zero-sld
+{
+  position: absolute;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #030303;
+  top: 50px;
+  left: 16px;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 798px) 
+{
+  [carrousel] .zero-sld
+  {
+    font-size: 1em;
+    color: #ffffff;
+  }
+  [carrousel]
+  {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 0px;
+    min-height: 50vh;
+  }
+  [carrousel] .slide-content h1
+  {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ffffff;
+    bottom: 8px;
+    left: 16px;
+  }
+  [carrousel] .slide #bruh 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+  }
+
+  [carrousel] .back
+  {
+    left: calc(0% + 0.5rem);
+  }
+  [carrousel] .forward
+  {
+    right: calc(0% + 0.5rem);
+  }
+
+}
+
+

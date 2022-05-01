@@ -1,0 +1,122 @@
+<html>
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Natan Winson Pratama">
+        <meta name="description" content="Just For Fun xD PKS is an school organisation">
+        <title>Patroli Keamanan Sekolah || PKS</title>
+    <body>
+        
+    </body>
+    </html>
+    <link rel="stylesheet" href="style.css">
+</head>
+<section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#!">Patroli Keamanan Sekolah</a>
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">About</a>
+          </li>
+          <li>
+            <a href="#!">Contact</a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="https://Instagram.com/pks.smkn1ce?igshid=YmMyMTA2M2Y">Instagram</a>
+              </li>
+              <li>
+                <a href="wa.me/6283114679829?teks=Permisi%20Kak%20Izin%20Bertanya%20Mengenai%20Organisasi%20PKS">Phone / Whatsapp</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCo4kU6BcRkYtk_gD4zgVcSg">Youtube</a>
+              </li>
+            </ul>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  
+  <!--<div class="first-content">
+      <a href="#"><h2>PATROLI KEAMANAN SEKOLAH</h2></a>
+  </div>-->
+
+  <section carrousel>
+    <input id="slide-0" name="carrousel" type="radio" checked/>
+    <div class="slide">
+        <div class="slide-one" id="bruh"></div>
+        <label for="slide-3" class="back">◀</label>
+        <div class="slide-content">
+          <h1 >Pemilihan Anggota Baru</h1>
+          <a href="Anggota.html"><p class="zero-sld">Anggota PKS 2021 - 2024</p></a>
+        </div>
+        
+        <label for="slide-1" class="forward">▶</label>
+    </div>
+    <input id="slide-1" name="carrousel" type="radio" \>
+    <div class="slide">
+        <label for="slide-0" class="back">◀</label>
+        <div class="slide-content">
+            <h1>One</h1>
+            <p>Basic description</p>
+        </div>
+        <label for="slide-2" class="forward">▶</label>
+    </div>
+
+    <input id="slide-2" name="carrousel" type="radio" \>
+    <div class="slide">
+        <label for="slide-1" class="back">◀</label>
+        <div class="slide-content">
+            <h1>Two</h1>
+        </div>
+        <label for="slide-3" class="forward">▶</label>
+    
+    </div>
+    <input id="slide-3" name="carrousel" type="radio" \>
+    <div class="slide">
+        <label for="slide-2" class="back">◀</label>
+        <div class="slide-content">
+            <h1>Three</h1>
+        </div>
+        <label for="slide-0" class="forward">▶</label>
+    </div>
+  </section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script id="lmao.js">
+(function ($) {// Begin jQuery
+  $(function () {// DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function (e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function () {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function () {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function () {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+//# sourceURL=pen.js
+</script>
+</html>
