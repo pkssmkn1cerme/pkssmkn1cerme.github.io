@@ -183,3 +183,30 @@ a.article:hover {
         display: none;
     }
 }
+
+.Mid-logo
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#yt
+{
+    position: relative;
+    display: flex;
+    width: 20px;
+    height: 25px;
+    left: -20px;
+    top: 31.5px;
+}
+
+.nav-link 
+{
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
