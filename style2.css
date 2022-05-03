@@ -3,6 +3,8 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -47,7 +49,7 @@ a:focus {
 }
 
 /* ---------------------------------------------------
-    SIDEBAR STYLE
+    Side + roll troll :)
 ----------------------------------------------------- */
 
 .wrapper {
@@ -144,8 +146,9 @@ a.article:hover {
     color: #fff !important;
 }
 
+
 /* ---------------------------------------------------
-    CONTENT STYLE
+    Isi :) 
 ----------------------------------------------------- */
 
 #content {
@@ -163,13 +166,14 @@ a.article:hover {
 }
 
 /* ---------------------------------------------------
-    MEDIAQUERIES
+    MEDIA FOR PHONES
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
@@ -248,67 +252,137 @@ a.article:hover {
     transition: ease 1s;
 }
 
-second-body
-{
-    font-family: "Quicksand", sans-serif;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background: #7f7fd5;
-    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ---------------------------------------------------
+    Card Content :)
+----------------------------------------------------- */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.container
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin-block: 2rem;
-    gap: 2rem;
+body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
-img
-{
-    max-width: 100%;
-    display: block;
-    object-fit: cover;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
 }
 
-.card
-{
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     width: clamp(20rem, calc(20rem + 2vw), 22rem);
     overflow: hidden;
-    box-shadow: 0 .1rem 1rem  rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     background: #ECE9E6;
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6)
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    transform: scale(1);
+    transition: ease 1s;
 }
 
-.card-content
+.card:hover
 {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+    transform: scale(0.9);
+    transition: ease 1s;
 }
 
-.tag 
-{
-    align-self: flex-start;
-    padding: .25em .75em;
-    border-radius: 1em;
-    font-size: .75rem;
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
-.tag-blue
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: 1em;
+}
+
+.tag-blue {
+  background: #56CCF2;
+background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+  background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.tag-coolred
 {
-    background: #56CCF2;
-    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
-      color: #fafafa;
+    background: #ff4b1f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.card-footer 
+{
+    text-align: center;
+}
+
+.user {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user__image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.user__info > small{
+  color: rgb(102, 102, 102);
+  font-family: "Quicksand", sans-serif;
 }
