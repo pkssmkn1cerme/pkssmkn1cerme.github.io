@@ -8,6 +8,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC, L]
+RewriteRule index.html [NC, L]
 
-#Alternate default index page
-DirectoryIndex pksmain.html
